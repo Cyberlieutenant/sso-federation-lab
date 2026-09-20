@@ -88,6 +88,20 @@ Each stage of this lab documents:
   redirected to Microsoft for authentication → signed in with KokoriLab credentials →
   redirected back to the toolkit, fully authenticated
 - Full SAML SSO round trip demonstrated end-to-end
+- ### September 20, 2026 — End-User SSO Experience Verified
+- Tested the SSO flow from an assigned end user's perspective (Sarah Chen) rather than
+  as the admin, and via IdP-initiated sign-in (starting from Microsoft's side) rather
+  than SP-initiated (starting from the app's login page)
+- Signed in as Sarah Chen at myapps.microsoft.com — confirmed the "KokoriLab SAML Test
+  App" tile appeared automatically on her personal dashboard as a result of the earlier
+  user assignment
+- Clicking the tile initially required registering a matching account on the SAML
+  Toolkit using Sarah's own email — same account-matching requirement discovered
+  earlier, now confirmed to apply per-user, not just for the admin account
+- Successfully signed in via a single click from the dashboard, with no additional
+  login prompts — the genuine one-click SSO experience a real employee would see
+- Demonstrates the full picture: admin-side SP-initiated testing plus real employee-side
+  IdP-initiated daily use, both working correctly
 
 ### September 19, 2026 — Environment Setup
 - Repo created to document the build as I go
