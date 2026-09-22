@@ -102,6 +102,26 @@ Each stage of this lab documents:
   login prompts — the genuine one-click SSO experience a real employee would see
 - Demonstrates the full picture: admin-side SP-initiated testing plus real employee-side
   IdP-initiated daily use, both working correctly
+  ### September 21, 2026 — Real-World SSO Integration: Salesforce
+- Signed up for a free Salesforce Developer Edition org to practice SSO against a real,
+  named enterprise vendor rather than only a test tool
+- Enabled SAML on the Salesforce side (Setup > Single Sign-On Settings)
+- Registered Salesforce as an Enterprise Application in Entra ID using Microsoft's
+  official gallery connector, configured with Salesforce's real Basic SAML values
+- Used Entra ID's App Federation Metadata URL to auto-configure the SAML connection on
+  Salesforce's side — faster and less error-prone than manual field entry
+- First metadata import attempt failed — Salesforce blocked the external URL as
+  untrusted; resolved by adding login.microsoftonline.com as an authorized Remote Site
+- Metadata import succeeded, auto-populating Issuer, Entity ID, Identity Provider
+  Login URL, and certificate
+- First sign-in attempt failed with a generic Single Sign-On Error — root cause was
+  Salesforce's default identity matching (by exact username) having no matching account
+- Resolved properly using Salesforce's Federation ID field — set it on the user record
+  to match the Entra ID identity, then changed the SAML config's identity type to match
+  by Federation ID instead of username (the correct, standard practice for this scenario)
+- Discovered SSO buttons don't appear on the login page automatically — had to enable
+  the SAML configuration under My Domain > Authentication Configuration
+- Successfully completed a full, live SSO sign-in against a real Salesforce org
 
 ### September 19, 2026 — Environment Setup
 - Repo created to document the build as I go
