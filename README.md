@@ -7,6 +7,7 @@
 ![SAML](https://img.shields.io/badge/SAML-FF6600?style=for-the-badge&logo=data:image/png;base64,&logoColor=white)
 ![OIDC](https://img.shields.io/badge/OIDC-000000?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow?style=for-the-badge)
+![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white)
 
 ## 🎯 Goal
 Building a hands-on lab demonstrating single sign-on (SSO) and identity federation —
