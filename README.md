@@ -61,6 +61,9 @@ flow, and configuring cross-organization trust — in a Microsoft 365 tenant.
 | Issue | Root Cause | Resolution |
 |---|---|---|
 | Redirected to SAML Toolkit but sign-in wasn't recognized | SSO doesn't automatically create app-side accounts — the toolkit requires a matching user to already exist on its own site | Registered a matching account on the SAML Toolkit using the same email as the Entra ID identity |
+| Salesforce blocked metadata URL import | External domain not whitelisted (CSRF/SSRF protection) | Added login.microsoftonline.com as an authorized Remote Site in Salesforce |
+| SSO sign-in failed with generic "Single Sign-On Error" | Salesforce's default identity matching by username had no matching account | Used the Federation ID field on the user record instead, and updated the SAML config's identity type to match |
+| SSO button missing from Salesforce login page | SAML config existed but wasn't enabled for login display | Enabled it under My Domain > Authentication Configuration |
 
 ## 📋 Documentation Approach
 Each stage of this lab documents:
