@@ -54,6 +54,8 @@ flow, and configuring cross-organization trust — in a Microsoft 365 tenant.
 - Configure external collaboration settings
 - Invite a guest user from another identity provider (e.g. Google)
 - Document the federated sign-in experience
+- > Bonus: also configured and tested a second, real-world SSO integration against a
+> free Salesforce Developer Edition org, in addition to the Microsoft SAML Toolkit.
 
 ## 🛠️ Notable Troubleshooting
 | Issue | Root Cause | Resolution |
