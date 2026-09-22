@@ -18,8 +18,9 @@ flow, and configuring cross-organization trust — in a Microsoft 365 tenant.
 | Component | Details |
 |---|---|
 | Tenant | Microsoft 365 with Entra ID P2 (Trial) |
-| Test App | Microsoft Entra SAML Toolkit ("KokoriLab SAML Test App") — samltoolkit.azurewebsites.net |
-| Test Users | Sarah Chen assigned for SSO testing; reusing KokoriLab test users from prior labs |
+| Test App 1 | Microsoft Entra SAML Toolkit ("KokoriLab SAML Test App") — samltoolkit.azurewebsites.net |
+| Test App 2 | Salesforce Developer Edition ("KokoriLab Salesforce") — orgfarm-8507b9f18f-dev-ed.develop.my.salesforce.com |
+| Test Users | Sarah Chen assigned for SAML Toolkit SSO testing; KokoriLab admin configured with Federation ID for Salesforce SSO |
 
 ## 📊 Quick Summary
 
